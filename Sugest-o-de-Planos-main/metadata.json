@@ -1,0 +1,5 @@
+{
+  "name": "Franchisee Access Request Portal",
+  "description": "A professional ticketing system for franchisees to request access inclusions and plan suggestions, featuring real-time role validation via Movidesk API.",
+  "requestFramePermissions": []
+}
