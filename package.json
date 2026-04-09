@@ -4,18 +4,21 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "node server.mjs",
     "build": "vite build",
-    "preview": "vite preview"
+    "start": "node server.mjs --production",
+    "preview": "node server.mjs --production"
   },
   "dependencies": {
+    "@google/genai": "^1.34.0",
+    "@vitejs/plugin-react": "^5.1.2",
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "lucide-react": "^0.562.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "sweetalert2": "^11.26.17",
-    "lucide-react": "^0.562.0",
-    "@google/genai": "^1.34.0",
-    "vite": "^7.3.0",
-    "@vitejs/plugin-react": "^5.1.2"
+    "vite": "^7.3.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

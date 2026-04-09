@@ -1,20 +1,33 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Sugestao de Planos
 
-# Run and deploy your AI Studio app
+Aplicacao React com backend Node/Express para consultar o Movidesk e enviar o payload ao webhook do BotConversa sem depender de proxy publico.
 
-This contains everything you need to run your app locally.
+## Como rodar
 
-View your app in AI Studio: https://ai.studio/apps/drive/1PleKDHEB1-nrBBa1_bRjmmyFPLOepD7y
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
+1. Instale as dependencias:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. Configure as variaveis em `.env` com base no `.env.example`.
+3. Rode em desenvolvimento:
    `npm run dev`
+4. Acesse:
+   `http://localhost:3002`
+
+## Producao
+
+1. Gere o build:
+   `npm run build`
+2. Inicie o servidor:
+   `npm run start`
+
+O servidor expoe as rotas:
+
+- `GET /api/health`
+- `GET /api/units`
+- `GET /api/check-user-role?email=...`
+- `POST /api/submit-ticket`
+
+## Variaveis de ambiente
+
+- `MOVIDESK_TOKEN`
+- `BOTCONVERSA_WEBHOOK`
+- `PORT`
